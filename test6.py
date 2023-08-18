@@ -2,7 +2,24 @@
 
 a = 1
 sum = 0
-i = -1
 
-while a < 100:
+while True:
+    if a % 2 != 0:
+        sum += a
+    else:
+        sum -= a
+    if sum >= 100:
+        print(a)
+        break
+    a += 1
     
+a = 0
+sum = 0
+i = -1 # 스위칭 변수
+
+while sum < 100:
+    i *= -1
+    a += 1
+    sum += a * i
+    
+print(a)
